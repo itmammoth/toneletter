@@ -1,0 +1,29 @@
+{
+  "name": "toneletter",
+  "version": "0.0.1",
+  "description": "A jQuery plugin that allows you to put phonetic and tone symbols into text field.",
+  "main": "try.js",
+  "scripts": {
+    "start": "http-server -o",
+    "spec": "karma start",
+    "build": "uglifyjs src/toneletter.js > src/toneletter.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itmammoth/toneletter.git"
+  },
+  "author": "itmammoth@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itmammoth/toneletter/issues"
+  },
+  "homepage": "https://github.com/itmammoth/toneletter#readme",
+  "dependencies": {
+    "jquery": "^1.11.3"
+  },
+  "devDependencies": {
+    "http-server": "^0.8.0",
+    "jasmine": "^2.3.2",
+    "uglify-js": "^2.4.24"
+  }
+}

@@ -1,0 +1,27 @@
+body {
+  font-family: "Lucida Sans Unicode", "DejaVu Sans", "Arial Unicode MS";
+}
+
+table, td {
+    border: 1px solid gray;
+}
+
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+.thai, .pinyin {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.code {
+  background: darkslategray;
+  color: whitesmoke;
+  padding: 10px;
+}
+
