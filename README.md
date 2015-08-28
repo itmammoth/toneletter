@@ -70,8 +70,8 @@ Add a tone symbol functionally at current cursor position.
 $text = $('.text').toneletter({ lang: 'th' });
 
 // Now your cursor is behind a vowel like [pho|m]
-$text.toneletter('addTone', 5);
-// You'll get [phǒm]
+
+$text.toneletter('addTone', 5); // You'll get [phǒm]
 ```
 
 #### jQuery#toneletter('off')
