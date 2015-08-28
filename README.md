@@ -13,7 +13,7 @@ You can try toneletter.js [on this demo page](https://toneletter.herokuapp.com/t
 Include toneletter.js after jQuery.
 ```
 <script src="jquery.min.js"></script>
-<script src="toneletter.js"></script>
+<script src="toneletter.min.js"></script>
 ```
 
 Build up text fields to accept phonetic and tone symbols.
@@ -41,7 +41,7 @@ You can initialize with some options.
 |Property|type|default|description|
 |----------|-------|----------------------------------------------------------|-----------------------|
 |fontFamily|String |'"Lucida Sans Unicode", "DejaVu Sans", "Arial Unicode MS"'|Specify the font family|
-|lang      |String<br>('th'\|'cn') |-|Choose Thai or Chinese Pinyin|
+|lang      |String|-|Choose 'th' or 'cn'|
 |phonetics |Object|-|Specify custom bindings and symbols with ```{ key: phonetics }``` object if you want|
 |toneKeys  |Array<String>|-|Specify any keys for putting tones ā, à, â, á, ǎ if you don't like default key bindings|
 
@@ -82,14 +82,23 @@ $text = $('.text').toneletter({ lang: 'th' });
 $text.toneletter('off')
 ```
 
-# Browser Support
+# Browser support
 * Chrome
 * Firefox 40+
 * Safari 6+
 * Internet Explorer 11+
 
-# Testing
-Specs are written using Jasmine and ran with Karma. To run the specs, run ```$ npm run spec```.
+# Developing
+Fork it, then getting some packages with using npm.
+```
+$ npm install
+```
+Other npm tasks.
+```
+$ npm run start // staring http-server
+$ npm run spec // testing
+$ npm run build // minifying the source file to deploy
+```
 
 # License
 Licensed under the MIT License.
