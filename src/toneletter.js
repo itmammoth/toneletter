@@ -5,8 +5,6 @@
  * GitHub:      https://github.com/itmammoth/toneletter
  * Demo site:   https://toneletter.herokuapp.com/try.html
  *
- * Thanks!
- *
  */
 (function($) {
     var LANG = {
@@ -33,7 +31,6 @@
     var pluginMethods = {
         init: function(options) {
             var settings = $.extend({
-                fontFamily: '"Lucida Sans Unicode", "DejaVu Sans", "Arial Unicode MS"',
 //              lang: '(th|cn)',
 //              phonetics: {},  // You can override if you want
 //              toneKeys: [],   // You can override if you want
@@ -110,7 +107,6 @@
             this.el = el;
             this.$el = $(el);
 
-            this.$el.css('font-family', this.settings.fontFamily);
             this.callbacks = {};
             this.__addPhoneticCallbacks(),
             this.__addToneCallbacks()

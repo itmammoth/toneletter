@@ -35,12 +35,21 @@ In the case of ```lang: 'cn'```,  it works with Chinese Pinyin bindings.
   * tone 1 (ā), tone 2 (á), tone 3 (ǎ), tone 4 (à)
 * Type 'U' key to put a phonetic letter 'ü'
 
+# Font
+
+Sometimes phonetic symbols can be troublesome in a proper displaying. If you have no idea about which font is suitable to nicely show the symbols, you can put the fonts below as `font-family` in your css definitions.
+
+```
+.toneletter {
+  font-family: "Lucida Sans Unicode", "DejaVu Sans", "Arial Unicode MS", serif;
+}
+```
+
 # Options
 You can initialize with some options.
 
 |Property|type|default|description|
 |----------|-------|----------------------------------------------------------|-----------------------|
-|fontFamily|String |'"Lucida Sans Unicode", "DejaVu Sans", "Arial Unicode MS"'|Specify the font family|
 |lang      |String|-|Choose 'th' or 'cn'|
 |phonetics |Object|-|Specify custom bindings and symbols with ```{ key: phonetics }``` object if you want|
 |toneKeys  |Array<String>|-|Specify any keys for putting tones ā, à, â, á, ǎ if you don't like default key bindings|
@@ -48,7 +57,6 @@ You can initialize with some options.
 Here's an example.
 ```
 $('.thai').toneletter({
-  fontFamily: 'Osaka',
   lang: 'th',
   toneKeys: ['0', '1', '2', '3', '4'],  // for tones ā, à, â, á, ǎ
   phonetics: {

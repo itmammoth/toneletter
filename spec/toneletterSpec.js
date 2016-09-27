@@ -36,15 +36,6 @@ describe('#init', function() {
         el = $el[0];
     });
 
-    describe('with default options', function() {
-        it('should set fonts suitable for displaying tones', function() {
-            $el.toneletter({ lang: 'th' });
-            expect($el.css('font-family')).toContain('Lucida Sans Unicode');
-            expect($el.css('font-family')).toContain('DejaVu Sans');
-            expect($el.css('font-family')).toContain('Arial Unicode MS');
-        });
-    });
-
     describe('with phonetics options', function() {
         it('should override the phonetics conversion (deeply merged)', function() {
             $el.toneletter({ lang: 'th', phonetics: { 'a': ['X'] } });

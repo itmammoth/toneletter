@@ -16,8 +16,9 @@ button {
 }
 
 .thai, .pinyin {
-    font-size: 18px;
-    margin: 10px 0;
+  font-family: "Lucida Sans Unicode", "DejaVu Sans", "Arial Unicode MS", serif;
+  font-size: 18px;
+  margin: 10px 0;
 }
 .code {
   background: darkslategray;
