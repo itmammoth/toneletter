@@ -86,6 +86,16 @@ describe('On toneletter input with lang: "th"', function() {
         $el.appendTo('body');
     });
 
+    describe('Pressing a tone key at the beginning of a line', function() {
+        beforeEach(function() {
+            $el.trigger(helper.createKeypressEvent('1'));
+        });
+
+        it('should insert a number as normal', function() {
+            expect($el.val()).toBe('1');
+        });
+    });
+
     PHONETICS.forEach(function(keyAndConverted) {
         var key = keyAndConverted[0],
         converted = keyAndConverted[1];

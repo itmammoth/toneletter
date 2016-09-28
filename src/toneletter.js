@@ -194,6 +194,7 @@
             __getPreviousCharacter: function() {
                 var position = this.__getCursorPosition();
                 var prevChar = this.el.value.charAt(position - 1);
+                if (prevChar === '') return prevChar;
                 // Skip if the previous character is just a tone symbol
                 if (this.__isTone(prevChar)) {
                     return this.el.value.charAt(position - 2);
