@@ -6,7 +6,7 @@ is a jQuery plugin that allows you to put phonetic and tone symbols into your te
 * Chinese Pinyin (拼音)
 
 # How it works
-![demo](https://raw.githubusercontent.com/wiki/itmammoth/toneletter/images/toneletter-demo.gif)
+![demo](https://github.com/itmammoth/toneletter/blob/images/toneletter-demo.gif)
 You can try toneletter.js [on this demo page](https://toneletter.herokuapp.com/try.html).
 
 # Usage
