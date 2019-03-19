@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server -o",
     "spec": "karma start",
-    "build": "uglifyjs src/toneletter.js > dist/toneletter.min.js; cp dist/toneletter.min.js docs/src; cp node_modules/jquery/dist/jquery.min.js docs/src"
+    "build": "uglifyjs src/toneletter.js > dist/toneletter.min.js; cp dist/toneletter.min.js docs/js/; cp node_modules/jquery/dist/jquery.min.js docs/js/"
   },
   "repository": {
     "type": "git",
