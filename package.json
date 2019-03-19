@@ -27,6 +27,7 @@
     "karma": "^2.0.5",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.2",
-    "uglify-js": "^3.4.10"
+    "uglify-js": "^3.4.10",
+    "cryptiles": ">=4.1.2"
   }
 }
