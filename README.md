@@ -7,7 +7,7 @@ is a jQuery plugin that allows you to put phonetic and tone symbols into your te
 
 # How it works
 ![demo](https://github.com/itmammoth/toneletter/blob/images/toneletter-demo.gif)
-You can try toneletter.js [on this demo page](https://toneletter.herokuapp.com/try.html).
+You can try toneletter.js [on this demo page](http://itmammoth.github.io/toneletter/).
 
 # Usage
 Include toneletter.js after jQuery.
