@@ -1,1 +1,118 @@
-<h1>Hello, github pages.</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Try toneletter</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="src/toneletter.js"></script>
+
+    <script src="index.js"></script>
+    <link href="index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Try toneletter.js</h1>
+    <h4><a href="https://github.com/itmammoth/toneletter">View on GitHub</a></h4>
+    <div>
+      <table>
+        <tr>
+          <td>
+            <textarea id="example1" class="thai" cols="60" rows="4">phom yaak ca phuut phaasaa thai khrap.</textarea>
+          </td>
+          <td>
+            Built up with Thai.
+            <ul>
+              <li>
+                Press '1'~'5' key behind a vowel to add a tone letter.<br>
+                &nbsp;&nbsp;tone 1 (ā), tone 2 (à), tone 3 (â), tone 4 (á), tone 5 (ǎ)
+              </li>
+              <li>Type 'W' key to put a phonetic letter 'ʉ'</li>
+              <li>Type 'U' key to put a phonetic letter 'ə'</li>
+              <li>Type 'E' key to put a phonetic letter 'ɛ'</li>
+              <li>Type 'O' key to put a phonetic letter 'ɔ'</li>
+              <li>Type 'N' key to put a phonetic letter 'ŋ'</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input id="example2" class="thai" value="pə̀ət" />
+          </td>
+          <td>
+            How to activate toneletter.<br>
+            <p class="code">$('.thai').toneletter({ lang: 'th' });</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input id="example3" class="thai" value="yùt sǎngkèet" />
+          </td>
+          <td>
+            <button id="off">Turn off</button><br>
+            Click this button, and it'll stop the observation on keys pressing.
+            <p class="code">
+              $input = $('.thai').toneletter({ lang: 'th' });<br>
+              $input.toneletter('off');
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input id="example4" class="thai" value="dooy progrɛɛm" />
+          </td>
+          <td>
+            <button class="add-tone" data-tone-number="1">Add tone 1</button>
+            <button class="add-tone" data-tone-number="2">Add tone 2</button>
+            <button class="add-tone" data-tone-number="3">Add tone 3</button>
+            <button class="add-tone" data-tone-number="4">Add tone 4</button>
+            <button class="add-tone" data-tone-number="5">Add tone 5</button><br>
+            Putting tone letters at current cursor position by method call.
+            <p class="code">
+              $input = $('.thai').toneletter({ lang: 'th' });<br>
+              <br>
+              $('#add-tone-1').click(function(e) {<br>
+              &nbsp;&nbsp;$input.toneletter('addTone', 1);<br>
+              });
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input id="example5" class="thai" value="kaan tìt tâŋ" />
+          </td>
+          <td>
+            Customize tone keys and phonetic keys and letters.
+            <p class="code">
+              $('.thai').toneletter({<br>
+              &nbsp;&nbsp;lang: 'th',<br>
+              &nbsp;&nbsp;toneKeys: ['0', '1', '2', '3', '4'],&nbsp;&nbsp;// for tones ā, à, â, á, ǎ<br>
+              &nbsp;&nbsp;phonetics: {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'U': '\u0289',  // ʉ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'A': '\u0259',  // ə<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'E': '\u025b',  // ɛ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'@': '\u0254',  // ɔ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;'G': '\u014b',  // ŋ<br>
+              &nbsp;&nbsp;},<br>
+              });<br>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input id="example6" class="pinyin" value="nǐ hǎo" />
+          </td>
+          <td>
+            It works well with Chinese Pinyin.<br>
+            <p class="code">$('.pinyin').toneletter({ lang: 'cn' });</p>
+            <ul>
+              <li>
+                Press '1'~'4' key behind a vowel to add a tone letter.<br>
+                &nbsp;&nbsp;tone 1 (ā), tone 2 (á), tone 3 (ǎ), tone 4 (à)
+              </li>
+              <li>Type 'U' key to put a phonetic letter 'ü'</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
