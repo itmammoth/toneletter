@@ -22,7 +22,7 @@ describe('$.fn.toneletter', function() {
     });
 
     it('should return jQuery object', function() {
-        expect($el.jquery).toBe('3.3.1');
+        expect($el.jquery).toBe('3.6.0');
     });
 });
 

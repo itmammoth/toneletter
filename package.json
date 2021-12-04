@@ -19,16 +19,16 @@
   },
   "homepage": "https://github.com/itmammoth/toneletter#readme",
   "dependencies": {
-    "jquery": ">=3.0.0"
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
+    "cryptiles": ">=4.1.2",
+    "hoek": "^6.1.3",
+    "http-server": "^0.11.2",
     "jasmine-core": "^2.99.1",
     "karma": "^2.0.5",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.2",
-    "uglify-js": "^3.4.10",
-    "cryptiles": ">=4.1.2",
-    "hoek": ">=4.2.1"
+    "uglify-js": "^3.14.4"
   }
 }
