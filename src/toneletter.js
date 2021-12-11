@@ -3,7 +3,7 @@
  *   A jQuery plugin that allows you to put phonetic and tone symbols into text field.
  *
  * GitHub:      https://github.com/itmammoth/toneletter
- * Demo site:   https://toneletter.herokuapp.com/try.html
+ * Demo site:   http://itmammoth.github.io/toneletter/
  *
  */
 (function($) {
