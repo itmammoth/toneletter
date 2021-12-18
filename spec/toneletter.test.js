@@ -1,4 +1,4 @@
-const Toneletter = require("../src/toneletter");
+import Toneletter from '../src/toneletter';
 
 const TONE_TABLE = Object.freeze({
   th: [

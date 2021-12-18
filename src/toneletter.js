@@ -74,7 +74,7 @@ const TONE_SYMBOLS = Object.freeze([
   "\u030C",
 ]);
 
-class Toneletter {
+export default class Toneletter {
   constructor(
     inputElement,
     settings = { lang: "", phoneticSymbols: null, toneKeys: null }
@@ -226,6 +226,3 @@ class Toneletter {
     return character;
   }
 }
-
-module.exports = Toneletter;
-module.exports.default = Toneletter;

@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/itmammoth/toneletter#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
     "http-server": "^14.0.0",
     "jest": "^27.4.4",
     "uglify-js": "^3.14.5"
