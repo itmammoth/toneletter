@@ -76,14 +76,14 @@ You can initialize with some options.
 |----------------|-------------|-----------------------------------------------------------------------------------------|
 |lang            |String       |Choose 'th' or 'cn'                                                                      |
 |phoneticSymbols |Object       |Specify custom bindings and symbols with ```{ key: phonetics }``` object if you want     |
-|toneKeys        |Array<String>|Specify any keys for putting tones ā, à, â, á, ǎ if you don't like default key bindings|
+|toneKeys        |Array<String>|Specify any keys for putting tones ā, à, â, á, ǎ if you don't like default key bindings  |
 
 Here's an example.
 ```javascript
 new Toneletter(input, ({
   lang: 'th',
   toneKeys: ['0', '1', '2', '3', '4'],  // for tones ā, à, â, á, ǎ
-  phonetics: {
+  phoneticSymbols: {
     'U': '\u0289', // ʉ
     'A': '\u0259', // ə
     'E': '\u025b', // ɛ
