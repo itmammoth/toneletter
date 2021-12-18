@@ -3,9 +3,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Try toneletter</title>
-    <script src="js/jquery.min.js"></script>
+    <script>
+      module = {};
+    </script>
     <script src="js/toneletter.min.js"></script>
-    <script src="js/index.js"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -34,29 +35,23 @@
         </tr>
         <tr>
           <td>
-            <input id="example2" class="thai" value="pə̀ət" />
-          </td>
-          <td>
-            How to activate toneletter.<br>
-            <p class="code">$('.thai').toneletter({ lang: 'th' });</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input id="example3" class="thai" value="yùt sǎngkèet" />
+            <input id="example2" class="thai" value="yùt sǎngkèet" />
           </td>
           <td>
             <button id="off">Turn off</button><br>
-            Click this button, and it'll stop the observation on keys pressing.
+            Click this button, and it'll stop the observation on keydown.
             <p class="code">
-              $input = $('.thai').toneletter({ lang: 'th' });<br>
-              $input.toneletter('off');
+              const input = document.getElementById("example2");<br>
+              const toneletter2 = new Toneletter(input, { lang: "th" });<br>
+              toneletter2.observe();<br>
+              // turn off<br>
+              tonelteter2.off();
             </p>
           </td>
         </tr>
         <tr>
           <td>
-            <input id="example4" class="thai" value="dooy progrɛɛm" />
+            <input id="example3" class="thai" value="dooy progrɛɛm" />
           </td>
           <td>
             <button class="add-tone" data-tone-number="1">Add tone 1</button>
@@ -64,44 +59,47 @@
             <button class="add-tone" data-tone-number="3">Add tone 3</button>
             <button class="add-tone" data-tone-number="4">Add tone 4</button>
             <button class="add-tone" data-tone-number="5">Add tone 5</button><br>
-            Putting tone letters at current cursor position by method call.
+            Adding tones to the vowel in front of the cursor by method call.
             <p class="code">
-              $input = $('.thai').toneletter({ lang: 'th' });<br>
-              <br>
-              $('#add-tone-1').click(function(e) {<br>
-              &nbsp;&nbsp;$input.toneletter('addTone', 1);<br>
+              const input = document.getElementById("example3");<br>
+              const toneletter3 = new Toneletter(input, { lang: 'th' });<br>
+              toneletter3.addTone(0); // Add tone number 0 `ā`<br>
               });
             </p>
           </td>
         </tr>
         <tr>
           <td>
-            <input id="example5" class="thai" value="kaan tìt tâŋ" />
+            <input id="example4" class="thai" value="kaan tìt tâŋ" />
           </td>
           <td>
-            Customize tone keys and phonetic keys and letters.
+            Customize tone keys and phonetic symbol keys and letters.
             <p class="code">
-              $('.thai').toneletter({<br>
+              const input = document.getElementById("example4");<br>
+              new Toneletter(input, ({<br>
               &nbsp;&nbsp;lang: 'th',<br>
               &nbsp;&nbsp;toneKeys: ['0', '1', '2', '3', '4'],&nbsp;&nbsp;// for tones ā, à, â, á, ǎ<br>
-              &nbsp;&nbsp;phonetics: {<br>
+              &nbsp;&nbsp;phoneticSymbols: {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;'U': '\u0289',  // ʉ<br>
               &nbsp;&nbsp;&nbsp;&nbsp;'A': '\u0259',  // ə<br>
               &nbsp;&nbsp;&nbsp;&nbsp;'E': '\u025b',  // ɛ<br>
               &nbsp;&nbsp;&nbsp;&nbsp;'@': '\u0254',  // ɔ<br>
               &nbsp;&nbsp;&nbsp;&nbsp;'G': '\u014b',  // ŋ<br>
               &nbsp;&nbsp;},<br>
-              });<br>
+              }).observe();<br>
             </p>
           </td>
         </tr>
         <tr>
           <td>
-            <input id="example6" class="pinyin" value="nǐ hǎo" />
+            <input id="example5" class="pinyin" value="nǐ hǎo" />
           </td>
           <td>
             It works well with Chinese Pinyin.<br>
-            <p class="code">$('.pinyin').toneletter({ lang: 'cn' });</p>
+            <p class="code">
+              const input = document.getElementById("example5");<br>
+              new Toneletter(input, { lang: 'cn' }).observe();
+            </p>
             <ul>
               <li>
                 Press '1'~'4' key behind a vowel to add a tone letter.<br>
@@ -113,5 +111,7 @@
         </tr>
       </table>
     </div>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
