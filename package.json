@@ -1,6 +1,6 @@
 {
   "name": "toneletter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A jQuery plugin that allows you to put phonetic and tone symbols into text field.",
   "main": "main.js",
   "scripts": {

@@ -80,9 +80,7 @@ describe("Toneletter", () => {
   });
   describe("#version", () => {
     it("should return current version", () => {
-      const el = document.createElement("textarea");
-      const toneletter = new Toneletter(el, { lang: "th" });
-      expect(toneletter.version).toBe("2.0.0");
+      expect(Toneletter.version).toBe("2.0.0");
     });
   });
   describe("#observe", () => {

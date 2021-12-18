@@ -1,3 +1,5 @@
+const packageJson = require("../package.json");
+
 const LANG_SETTINGS = Object.freeze({
   th: {
     phoneticSymbols: {
@@ -99,16 +101,15 @@ export default class Toneletter {
     };
   }
 
-  get version() {
-    // TODO: retrive from package.json
-    return "2.0.0";
+  static get version() {
+    return packageJson.version;
   }
 
   observe() {
     this.__onKeyDown.__bound = (e) => this.__onKeyDown(e);
     this.inputElement.addEventListener("keydown", this.__onKeyDown.__bound);
   }
-  
+
   off() {
     this.inputElement.removeEventListener("keydown", this.__onKeyDown.__bound);
   }
