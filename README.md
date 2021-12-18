@@ -1,6 +1,6 @@
 # toneletter.js
 
-Toneletter is a javascript plugin that allows you to put phonetic/tone symbols into your text fields with simple key binding.
+Toneletter is a javascript plugin that allows you to put phonetic/tone symbols into your text fields with simple key bindings.
 
 # Support languages
 
