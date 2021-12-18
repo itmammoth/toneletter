@@ -1,24 +1,47 @@
 # toneletter.js
-is a jQuery plugin that allows you to put phonetic and tone symbols into your text fields with simple key binding.
+
+Toneletter is a javascript plugin that allows you to put phonetic/tone symbols into your text fields with simple key binding.
 
 # Support languages
+
 * Thai (ไทย)
 * Chinese Pinyin (拼音)
 
 # How it works
+
 ![demo](https://github.com/itmammoth/toneletter/blob/images/toneletter-demo.gif)
 You can try toneletter.js [on this demo page](http://itmammoth.github.io/toneletter/).
 
-# Usage
-Include toneletter.js after jQuery.
-```
-<script src="jquery.min.js"></script>
-<script src="toneletter.min.js"></script>
+# Installation
+
+```bash
+$ npm install toneletter --save-dev
 ```
 
-Build up text fields to accept phonetic and tone symbols.
+
+# Usage
+
+## For browsers
+
+Include toneletter.js.
+
+```javascript
+// for browser
+<script src="toneletter.min.js"></script>
+
+// Node
+const Toneletter = require("toneletter");
+
+// ES6
+import Toneletter from "toneletter";
 ```
-$('.thai').toneletter({ lang: 'th' });
+
+Toneletterize input/textarea.
+
+```javascript
+const input = document.getElementById("text");
+const toneletter = new Toneletter(input, { lang: 'th' });
+toneletter.observe(); // Start observation on keydown
 ```
 
 You'll have special key bindings on it with default ```lang: 'th'``` option.
@@ -48,15 +71,15 @@ Sometimes phonetic symbols can be troublesome in a proper displaying. If you hav
 # Options
 You can initialize with some options.
 
-|Property|type|default|description|
-|----------|-------|----------------------------------------------------------|-----------------------|
-|lang      |String|-|Choose 'th' or 'cn'|
-|phonetics |Object|-|Specify custom bindings and symbols with ```{ key: phonetics }``` object if you want|
-|toneKeys  |Array<String>|-|Specify any keys for putting tones ā, à, â, á, ǎ if you don't like default key bindings|
+|key             |type         |description                                                                              |
+|----------------|-------------|-----------------------------------------------------------------------------------------|
+|lang            |String       |Choose 'th' or 'cn'                                                                      |
+|phoneticSymbols |Object       |Specify custom bindings and symbols with ```{ key: phonetics }``` object if you want     |
+|toneKeys        |Array<String>|Specify any keys for putting tones ā, à, â, á, ǎ if you don't like default key bindings|
 
 Here's an example.
-```
-$('.thai').toneletter({
+```javascript
+new Toneletter(input, ({
   lang: 'th',
   toneKeys: ['0', '1', '2', '3', '4'],  // for tones ā, à, â, á, ǎ
   phonetics: {
@@ -70,42 +93,42 @@ $('.thai').toneletter({
 ```
 
 # Methods
-You can invoke some plugin methods.
+#### Toneletter#addTone(toneNumber: Number)
 
-#### jQuery#toneletter('addTone', toneNumber)
 Add a tone symbol functionally at current cursor position.
-```
-$text = $('.text').toneletter({ lang: 'th' });
+
+```javascript
+const input = document.getElementById("text");
+const toneletter = new Toneletter(input, { lang: 'th' });
 
 // Now your cursor is behind a vowel like [pho|m]
 
-$text.toneletter('addTone', 5); // You'll get [phǒm]
+toneletter.addTone(4); // You'll get [phǒm]
 ```
 
-#### jQuery#toneletter('off')
-Turn off the observer on keypress.
-```
-$text = $('.text').toneletter({ lang: 'th' });
+#### Toneletter#off()
+
+Turn off the observer on keydown.
+
+```javascript
+const input = document.getElementById("text");
+const toneletter = new Toneletter(input, { lang: 'th' });
+toneletter.observe();
 ...
-$text.toneletter('off')
+toneletter.off(); // Stop the observation.
 ```
-
-# Browser support
-* Chrome
-* Firefox 40+
-* Safari 6+
-* Internet Explorer 11+
 
 # Developing
+
 Fork it, then getting some packages with using npm.
 ```
 $ npm install
 ```
 Other npm tasks.
-```
-$ npm run start // staring http-server
-$ npm run spec // testing
-$ npm run build // minifying the source file to deploy
+```bash
+$ npm run start   # staring dev server
+$ npm run test    # testing
+$ npm run build   # build for release
 ```
 
 # License
