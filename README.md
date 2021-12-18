@@ -18,6 +18,7 @@ You can try toneletter.js [on this demo page](http://itmammoth.github.io/tonelet
 $ npm install toneletter --save-dev
 ```
 
+Or just download `dist/toneletter.min.js`.
 
 # Usage
 
