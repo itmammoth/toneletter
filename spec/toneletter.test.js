@@ -80,7 +80,7 @@ describe("Toneletter", () => {
   });
   describe("#version", () => {
     it("should return current version", () => {
-      expect(Toneletter.version).toBe("2.0.2");
+      expect(Toneletter.version).toBe("2.0.3");
     });
   });
   describe("#observe", () => {
