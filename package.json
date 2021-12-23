@@ -7,7 +7,6 @@
     "start": "webpack serve",
     "test": "jest",
     "build": "webpack; cp dist/toneletter.min.js docs/js/",
-    "publish": "npm run build & npm publish ./"
   },
   "repository": {
     "type": "git",
