@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve",
     "test": "jest",
-    "build": "webpack; cp dist/toneletter.min.js docs/js/",
+    "build": "webpack; cp dist/toneletter.min.js docs/js/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,12 @@
     "url": "https://github.com/itmammoth/toneletter/issues"
   },
   "homepage": "https://github.com/itmammoth/toneletter#readme",
+  "keywords": [
+    "tone",
+    "phonetic",
+    "thai",
+    "chinese"
+  ],
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
